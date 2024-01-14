@@ -3,7 +3,6 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     kotlin("jvm") version "1.9.10"
     id("com.diffplug.spotless") version "6.22.0"
-    id("info.solidsoft.pitest") version "1.15.0"
     application
 }
 
@@ -54,13 +53,4 @@ spotless {
 
 tasks.check {
     dependsOn(tasks.spotlessCheck)
-}
-
-pitest {
-    setProperty("junit5PluginVersion", "1.2.1")
-    setProperty("testPlugin", "junit5")
-    setProperty("targetClasses", listOf("com.isamadrid90.demo.*"))
-    setProperty("outputFormats", listOf("HTML"))
-    setProperty("threads", 2)
-    setProperty("withHistory", true)
 }
