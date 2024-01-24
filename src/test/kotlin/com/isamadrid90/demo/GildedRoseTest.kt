@@ -14,7 +14,7 @@ class GildedRoseTest {
     }
 
     @Test
-    fun `Aged Brie should decrease 1 sellIn`(){
+    fun `Aged Brie should decrease 1 sellIn`()  {
         val itemList = mutableListOf(Item("Aged Brie", 1, 2))
         GildedRose(itemList).updateQuality()
 
